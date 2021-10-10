@@ -19,7 +19,6 @@ class App extends Component {
             this.setState({users: JSON.parse(localStorage.getItem('users'))});
             let end = new Date().getTime();
             let time = end - this.start;
-            alert('Execution time: ' + time);
         } else {
             fetch('https://jsonplaceholder.typicode.com/users')
                 .then(result => result.json())
@@ -29,7 +28,6 @@ class App extends Component {
                     this.setState({users: users});
                     let end = new Date().getTime();
                     let time = end - this.start;
-                    alert('Execution time: ' + time);
                 })
         }
 
